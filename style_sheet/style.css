@@ -1,0 +1,129 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #f0f4f8, #e2ecf2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+/* Container for the login form */
+.login-container,.register-container {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 3rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    width: 350px;
+    border: 1px solid #d1d5db;
+    transition: all 0.3s ease;
+}
+
+.login-container:hover , .register-container:hover  {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Header Styling */
+h1 {
+    text-align: center;
+    color: #3a7ca5;
+    margin-bottom: 1.5rem;
+    font-size: 2.65rem;
+}
+
+/* Input group */
+.input-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+/* Label Styling */
+label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+    color: #6b7280;
+    font-size: 0.9rem;
+    pointer-events: none;
+}
+
+/* Input styling */
+input {
+    padding: 1rem 1.5rem;
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    background-color: #f9fafb;
+    color: #333;
+    outline: none;
+    border-bottom: 2px solid #d1d5db;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Input focus and filled state */
+input:focus {
+    border-bottom: 2px solid #3a7ca5;
+    background-color: #eef3f9;
+}
+
+input:focus + label,
+input:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 10px;
+    font-size: 12px;
+    color: #3a7ca5;
+}
+
+/* Button Styling */
+button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #3a7ca5;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #2b6c8a;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+button i {
+    margin-right: 8px;
+}
+
+/* Link and Paragraph Styling */
+p {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+a {
+    color: #3a7ca5;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    color: #ff7f50;
+    text-decoration: underline;
+}
+
+/* Media Query for responsiveness */
+@media (max-width: 600px) {
+    .login-container {
+        width: 90%;
+        padding: 1.5rem;
+    }
+}
